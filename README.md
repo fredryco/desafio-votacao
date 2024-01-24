@@ -27,9 +27,9 @@ Lembre de deixar todas as orientações necessárias para executar o seu código
 ### Tarefas bônus
 
 - Tarefa Bônus 1 - Integração com sistemas externos
-  - Criar uma Facade/Client Fake que retorna aleátoriamente se um CPF recebido é válido ou não.
-  - Caso o CPF seja inválido, a API retornará o HTTP Status 404 (Not found). Você pode usar geradores de CPF para gerar CPFs válidos
-  - Caso o CPF seja válido, a API retornará se o usuário pode (ABLE_TO_VOTE) ou não pode (UNABLE_TO_VOTE) executar a operação. Essa operação retorna resultados aleatórios, portanto um mesmo CPF pode funcionar em um teste e não funcionar no outro.
+    - Criar uma Facade/Client Fake que retorna aleátoriamente se um CPF recebido é válido ou não.
+    - Caso o CPF seja inválido, a API retornará o HTTP Status 404 (Not found). Você pode usar geradores de CPF para gerar CPFs válidos
+    - Caso o CPF seja válido, a API retornará se o usuário pode (ABLE_TO_VOTE) ou não pode (UNABLE_TO_VOTE) executar a operação. Essa operação retorna resultados aleatórios, portanto um mesmo CPF pode funcionar em um teste e não funcionar no outro.
 
 ```
 // CPF Ok para votar
@@ -115,3 +115,42 @@ A tela do tipo SELECAO exibe uma lista de opções para que o usuário.
 O aplicativo envia uma requisição POST para a url informada e com o body definido pelo objeto dentro de cada item da lista de seleção, quando o mesmo é acionado, semelhando ao funcionamento dos botões da tela FORMULARIO.
 
 # desafio-votacao
+
+
+# Desafio Votação 
+Frederico Brito Cruz
+
+## Tecnologias utilizadas
+- Java 11
+- Spring boot 2.7
+- Docker 
+- PostgreSQL
+- Documentação : Swagger
+- Teste: JUnit 4.12, Mockito, H2
+
+## Como rodar o projeto
+
+***Build***
+
+``` mvn clean install ```
+
+Após buildar a aplicação é necessário subir o Postgres através do docker-compose, com o comando abaixo:
+
+``` docker-compose up ```
+
+***Run***
+
+Comando para rodar a aplicação:
+
+``` mvn spring-boot:run ```
+
+
+***Swagger***
+
+localhost:8080/swagger-ui.html
+
+***Tarefa 1***
+Foi criada uma API para simular uma aplicação externa
+
+***Tarefa 3***
+O versionamento foi feito na URL da API incluindo o 'v1'
