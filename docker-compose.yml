@@ -4,7 +4,7 @@ services:
   postgres:
     image: postgres
     volumes:
-      - ./bancoScripts/TABELAS.sql:/docker-entrypoint-initdb.d/DESAFIO_VOTACAO_DDL.sql
+      - ./bancoScripts/TABELAS.sql:/docker-entrypoint-initdb.d/TABELAS.sql
     environment:
       POSTGRES_PASSWORD: "Postgres2024@"
     ports:
